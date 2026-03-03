@@ -1,0 +1,137 @@
+/*------- Menú -------*/
+
+.menu-container{
+    border: solid 1px black;
+    background-color: grey;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.menu-principal {
+    
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 15px;
+    padding: 0px;
+}
+
+a{
+    display: block;
+    border: solid 1px black;
+    text-decoration: none;
+    color: black;
+    padding: 10px;  
+    width: 70px;     
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.link{
+    padding: 5px;
+}
+
+/*------- Capçalera -------*/
+.main-image {
+    border: solid 1px black;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.titol-container{
+    border: solid 1px black;
+    width: auto;
+    height: auto;
+    margin-left: 50px;
+}
+
+.titol-container > p:first-child {
+    font-size: 30px;
+}
+
+/*------- Sobre Nosaltres -------*/
+.nosaltres-container{
+    border: solid 1px black;
+    margin-top: 70px;
+}
+
+.nosaltres-contain-1,
+.nosaltres-contain-2 {
+    display: flex;
+    align-items: center;
+    gap: 30px;             
+    margin-bottom: 40px;
+}
+
+.nosaltres-contain img {
+    width: 30%;
+    border-radius: 20px;
+}
+
+.nosaltres-contain p{
+    width: 70%;
+}
+
+/*------- Carta -------*/
+.carta-container{
+    border: solid 1px black;
+    margin-top: 70px;
+}
+
+/*------- Galeria de fotos -------*/
+.galeria-container{
+    border: solid 1px black;
+    margin-top: 70px;
+}
+
+/*------- Formulari -------*/
+.formulari-container{
+    border: solid 1px black;
+    margin-top: 70px;
+}
+
+/*------- Botó Reservar -------*/
+.reservar{
+    background-color: rgb(19, 19, 147);
+    color: white;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px;
+}
+
+/*------- Footer -------*/
+footer {
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
+    gap: 10px;
+}
+
+.logo-container {
+    justify-content: end;
+    margin-right: 20px;
+}
+
+.logo-container img {
+    border-radius: 50%;
+    width: 60px;
+    height: auto;
+}
