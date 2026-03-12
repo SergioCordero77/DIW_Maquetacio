@@ -61,6 +61,8 @@ a:hover {
 .nosaltres-container{
     border: solid 1px black;
     margin-top: 70px;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .nosaltres-contain-1,
@@ -84,6 +86,8 @@ a:hover {
 .carta-container{
     border: solid 1px black;
     margin-top: 70px;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .carta-contain .el:nth-child(1){
@@ -139,6 +143,56 @@ a:hover {
 .galeria-container{
     border: solid 1px black;
     margin-top: 70px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.galeria-contain-1, .galeria-contain-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px
+}
+
+.galeria-contain-1 img, .galeria-contain-2 img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.galeria-contain-2{
+    margin-top: 20px;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
 }
 
 /*------- Formulari -------*/
