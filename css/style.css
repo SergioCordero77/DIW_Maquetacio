@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
 /*------- Menú -------*/
 
 .menu-container{
@@ -183,6 +187,24 @@ a:hover {
 .formulari-container{
     border: solid 1px black;
     margin-top: 70px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  width: 50%;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+textarea{
+  height: 80px;
 }
 
 /*------- Botó Reservar -------*/
