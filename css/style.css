@@ -94,36 +94,20 @@ a:hover {
     grid-area: ele1
 }
 
-.carta-contain .el:nth-child(2){
+.carta-contain .el:nth-child(4n+2){
     grid-area: ele2
 }
 
-.carta-contain .el:nth-child(3){
+.carta-contain .el:nth-child(4n+3){
     grid-area: ele3
 }
 
-.carta-contain .el:nth-child(4){
+.carta-contain .el:nth-child(4n+4){
     grid-area: ele4
 }
 
-.carta-contain .el:nth-child(5){
+.carta-contain .el:nth-child(4n+5){
     grid-area: ele5
-}
-
-.carta-contain .el:nth-child(6){
-    grid-area: ele6
-}
-
-.carta-contain .el:nth-child(7){
-    grid-area: ele7
-}
-
-.carta-contain .el:nth-child(8){
-    grid-area: ele8
-}
-
-.carta-contain .el:nth-child(9){
-    grid-area: ele9
 }
 
 .carta-contain .el{

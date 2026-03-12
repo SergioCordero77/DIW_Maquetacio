@@ -41,8 +41,8 @@
             </div>
         </div>
         
-        <section class="carta-container"></section>
-        <h2>Carta</h2>    
+        <section class="carta-container">
+            <h2>Carta</h2>    
             <div class="carta-contain">    
                 <div class="el"><span class="num">Menú</span></div>
                 
@@ -102,6 +102,27 @@
 
         <section class="formulari-container">
             <h2>Formulari</h2>
+
+            <form>
+                <label for="nom">Nom</label>
+                <input id="nom" name="nom" type="text" placeholder="Escriu el teu nom" required>
+                
+                <label for="nom">Nom</label>
+                <input id="number" name="nom" type="text" placeholder="Escriu el teu nom" required>
+                
+                <label for="data">Data</label>
+                <input type="date" id="data" name="data" value="data">
+
+                <label for="hora">Hora</label>
+                <input type="time" id="hora" name="hora" value="hora">
+
+                <label for="missatge">Consideracions</label>
+                <textarea id="missatge" name="missatge" placeholder="Explica’ns si hem d'adaptar algún dels menú..."></textarea>
+            
+                <button type="submit">Enviar</button></fieldset>
+            </form>
+
+
         </section>
 
         <button class="reservar">Reservar</button>
