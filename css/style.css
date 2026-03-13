@@ -1,3 +1,7 @@
+html{
+    font-size: 20px;
+}
+
 body {
   font-family: Arial, sans-serif;
 }
@@ -9,7 +13,7 @@ body {
     background-color: grey;
     position: sticky;
     top: 0;
-    width: 100%;
+    z-index: 1;
 }
 
 .menu-principal {
@@ -23,16 +27,15 @@ body {
     padding: 0px;
 }
 
-a{
-    display: block;
+.menu-principal a{
     border: solid 1px black;
     text-decoration: none;
     color: black;
     padding: 10px;  
-    width: 70px;     
+    width: 120px;     
 }
 
-a:hover {
+.menu-principal a:hover {
     text-decoration: underline;
 }
 
@@ -64,9 +67,10 @@ a:hover {
 /*------- Sobre Nosaltres -------*/
 .nosaltres-container{
     border: solid 1px black;
+    width: 80%;
+    padding: 20px;
+    margin: auto;
     margin-top: 70px;
-    box-sizing: border-box;
-    padding: 10px;
 }
 
 .nosaltres-contain-1,
@@ -89,29 +93,46 @@ a:hover {
 /*------- Carta -------*/
 .carta-container{
     border: solid 1px black;
+    width: 80%;
+    padding: 20px;
+    margin: auto;
     margin-top: 70px;
-    box-sizing: border-box;
-    padding: 10px;
 }
 
 .carta-contain .el:nth-child(1){
     grid-area: ele1
 }
 
-.carta-contain .el:nth-child(4n+2){
+.carta-contain .el:nth-child(2){
     grid-area: ele2
 }
 
-.carta-contain .el:nth-child(4n+3){
+.carta-contain .el:nth-child(3){
     grid-area: ele3
 }
 
-.carta-contain .el:nth-child(4n+4){
+.carta-contain .el:nth-child(4){
     grid-area: ele4
 }
 
-.carta-contain .el:nth-child(4n+5){
+.carta-contain .el:nth-child(5){
     grid-area: ele5
+}
+
+.carta-contain .el:nth-child(6){
+    grid-area: ele6
+}
+
+.carta-contain .el:nth-child(7){
+    grid-area: ele7
+}
+
+.carta-contain .el:nth-child(8){
+    grid-area: ele8
+}
+
+.carta-contain .el:nth-child(8){
+    grid-area: ele9
 }
 
 .carta-contain .el{
@@ -120,19 +141,22 @@ a:hover {
 
 .carta-contain {
     display: grid;
-    grid-template-columns:  10% 45% 45%;
+    grid-template-columns:  10% 1fr 1fr;
     grid-template-areas:    "ele1 ele1 ele1"
                             "ele2 ele3 ele3"
-                            "ele2 ele4 ele5";
+                            "ele2 ele4 ele5"
+                            "ele6 ele7 ele7"
+                            "ele6 ele8 ele9";
     gap: 15px;
 }
 
 /*------- Galeria de fotos -------*/
 .galeria-container{
     border: solid 1px black;
+    width: 80%;
+    padding: 20px;
+    margin: auto;
     margin-top: 70px;
-    box-sizing: border-box;
-    padding: 10px;
 }
 
 .galeria-contain-1, .galeria-contain-2{
@@ -186,9 +210,10 @@ a:hover {
 /*------- Formulari -------*/
 .formulari-container{
     border: solid 1px black;
-    margin-top: 70px;
+    width: 80%;
     padding: 20px;
-    box-sizing: border-box;
+    margin: auto;
+    margin-top: 70px;
 }
 
 label {
@@ -237,6 +262,14 @@ footer {
 .logo-container {
     justify-content: end;
     margin-right: 20px;
+}
+
+.footer-generic a{
+    border: solid 1px black;
+    text-decoration: none;
+    color: black;
+    padding: 10px;  
+    width: 11rem;     
 }
 
 .logo-container img {
