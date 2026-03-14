@@ -17,22 +17,24 @@ body {
 }
 
 .menu-principal {
-    
     text-align: center;
     list-style-type: none;
     display: flex;
-    flex-direction: row;
     justify-content: end;
     gap: 15px;
-    padding: 0px;
+}
+
+.menu-principal li{
+    width: 6rem;
 }
 
 .menu-principal a{
+    display: block;
+    text-align: center;
     border: solid 1px black;
     text-decoration: none;
     color: black;
-    padding: 10px;  
-    width: 120px;     
+    padding: 0.25rem;       
 }
 
 .menu-principal a:hover {
@@ -51,6 +53,9 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
+    background-image: url("/img/Cuina.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .titol-container{
@@ -191,9 +196,7 @@ body {
 .overlay {
   position: absolute;
   bottom: 0;
-  background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
   width: 100%;
   transition: .5s ease;
   opacity:0;
@@ -201,6 +204,8 @@ body {
   font-size: 20px;
   padding: 20px;
   text-align: center;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
 }
 
 .img-container:hover .overlay {
@@ -216,31 +221,76 @@ body {
     margin-top: 70px;
 }
 
+.formulari{
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    padding: 0 30px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.fila{
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: row;
+    gap: 100px;
+    box-sizing: border-box;
+}
+
+.columna{
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.columna-submit{
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: row;
+    justify-content: end;
+    box-sizing: border-box;
+}
+
 label {
   display: block;
+  padding-bottom: 0.5rem;
 }
 
 input,
 textarea {
-  width: 50%;
+  width: 100%;
   padding: 5px;
   border: 1px solid black;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 textarea{
   height: 80px;
 }
 
+button[type="submit"]{
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #1a13f9;
+}
+
 /*------- Botó Reservar -------*/
 .reservar{
-    background-color: rgb(19, 19, 147);
-    color: white;
-    border-radius: 10px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #1a13f9;
     position: fixed;
     bottom: 30px;
     right: 30px;
-    padding: 15px;
 }
 
 /*------- Footer -------*/
