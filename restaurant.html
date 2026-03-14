@@ -14,19 +14,22 @@
     <body> 
         <nav class="menu-container">
             <ul class="menu-principal">
-                <li class="link"><a href="link1.html">Nosaltres</a></li>
-                <li class="link"><a href="link2.html">Carta</a></li>
-                <li class="link"><a href="link3.html">Galeria</a></li>
+                <li class="link"><a href="#nosaltres">Nosaltres</a></li>
+                <li class="link"><a href="#carta">Carta</a></li>
+                <li class="link"><a href="#galeria">Galeria</a></li>
             </ul>
         </nav>
         
-        <div class = "main-image">
-            <div class = "titol-container">
-                <p>Restaurant <strong>Els Coberts</strong></p>
-                <p>El restaurant innovador del centre de Barcelona.</p>
+        <section class="introduction-img">
+            <div class = "main-image">
+                <div class = "titol-container">
+                    <p>Restaurant <strong>Els Coberts</strong></p>
+                    <p>El restaurant innovador del centre de Barcelona.</p>
+                </div>
             </div>
-        </div>
-        <div class="nosaltres-container">
+        </section>
+
+        <section class="nosaltres-container" id="nosaltres">
             <h2>Sobre nosaltres</h2>
             <div class ="nosaltres-contain">
                 <div class="nosaltres-contain-1">
@@ -38,15 +41,19 @@
                     <img src="img/Cuina.jpg" alt="Cuina del restaurant">
                 </div>
             </div>
-        </div>
+        </section>
         
-        <section class="carta-container">
+        <section class="carta-container" id="carta">
             <h2>Carta</h2>    
             <div class="carta-contain">    
                 <div class="el"><span class="num">Menú</span></div>
                 
-                <div class="el"><span class="num">Menú 1</span></div>
-                <div class="el"><span class="num">Contingut</span></div>
+                <div class="el"><span class="num">Élégance Française</span></div>
+                <div class="el">
+                    <span class="num">
+                        <p>Aquest menú s’ha creat pensant en oferir una experiència gastronòmica elegant i equilibrada. Les tècniques utilitzades combinen la precisió de la cuina francesa clàssica amb tocs moderns, com l’ús d’emulsions cítriques i purés suaus. L’objectiu és que el comensal gaudeixi d’una harmonia de sabors i textures, des de la frescor delicada del primer plat fins a la intensitat i sofisticació del segon plat, tot en un viatge culinari refinat i memorable.</p>
+                    </span>
+                </div>
                 <div class="el"><span class="num">Foto Plat 1</span></div>
                 <div class="el"><span class="num">Foto Plat 2</span></div>
 
@@ -57,49 +64,65 @@
             </div>
         </section>
             
-        <section class="galeria-container">
+        <section class="galeria-container" id="galeria">
             <h2>Galeria de fotos</h2>
             
             <div class="galeria-contain-1">
                 <div class="img-container">
-                    <img src="img/restaurant.jpg" alt="Sala del restaurant">
-                    <div class="overlay">Plat 1</div>
+                    <div class="img-overlay">
+                        <img src="img/restaurant.jpg" alt="Sala del restaurant">
+                        <div class="overlay">Plat 1</div>
+                    </div>
                 </div>
                 <div class="img-container">
-                    <img src="img/restaurant.jpg" alt="Sala del restaurant">
-                    <div class="overlay">Plat 2</div>
+                    <div class="img-overlay">
+                        <img src="img/restaurant.jpg" alt="Sala del restaurant">
+                        <div class="overlay">Plat 2</div>
+                    </div>
                 </div>
                 <div class="img-container">
-                    <img src="img/restaurant.jpg" alt="Sala del restaurant">
-                    <div class="overlay">Plat 3</div>
+                    <div class="img-overlay">
+                        <img src="img/restaurant.jpg" alt="Sala del restaurant">
+                        <div class="overlay">Plat 3</div>
+                    </div>
                 </div>
                 <div class="img-container">
-                    <img src="img/restaurant.jpg" alt="Sala del restaurant">
-                    <div class="overlay">Plat 4</div>
+                    <div class="img-overlay">
+                        <img src="img/restaurant.jpg" alt="Sala del restaurant">
+                        <div class="overlay">Plat 4</div>
+                    </div>
                 </div>
             </div>
 
             <div class="galeria-contain-2">
                 <div class="img-container">
-                    <img src="img/restaurant.jpg" alt="Sala del restaurant">
-                    <div class="overlay">Plat 5</div>
+                    <div class="img-overlay">
+                        <img src="img/restaurant.jpg" alt="Sala del restaurant">
+                        <div class="overlay">Plat 5</div>
+                    </div>
                 </div>
                 <div class="img-container">
-                    <img src="img/restaurant.jpg" alt="Sala del restaurant">
-                    <div class="overlay">Plat 6</div>
+                    <div class="img-overlay">
+                        <img src="img/restaurant.jpg" alt="Sala del restaurant">
+                        <div class="overlay">Plat 6</div>
+                    </div>
                 </div>
                 <div class="img-container">
-                    <img src="img/restaurant.jpg" alt="Sala del restaurant">
-                    <div class="overlay">Plat 7</div>
+                    <div class="img-overlay">
+                        <img src="img/restaurant.jpg" alt="Sala del restaurant">
+                        <div class="overlay">Plat 7</div>
+                    </div>
                 </div>
                 <div class="img-container">
-                    <img src="img/restaurant.jpg" alt="Sala del restaurant">
-                    <div class="overlay">Plat 8</div>
+                    <div class="img-overlay">
+                        <img src="img/restaurant.jpg" alt="Sala del restaurant">
+                        <div class="overlay">Plat 8</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="formulari-container">
+        <section class="formulari-container" id="reservar">
             <h2>Reservar</h2>
             
             <form>
@@ -139,12 +162,20 @@
             </form>
         </section>
 
-        <button class="reservar">Reservar</button>
+        <button class="reservar-btn" onclick="location.href='#reservar'">Reservar</button>
 
         <footer class="footer-generic"> 
             <div class="contact-container">
-                <a href="mailto:info@elscoberts.com" class="contact-botons"><i class="fas fa-envelope"></i>info@elscoberts.com</a>
-                <a href="tel:+34938887755" class="contact-botons"><i class="fas fa-phone"></i>+34 93 888 77 55</a>
+                <a href="mailto:info@elscoberts.com" class="contact-botons">
+                    <span class="icon-text">
+                        <i class="fas fa-envelope"></i>info@elscoberts.com
+                    </span>
+                </a>
+                <a href="tel:+34938887755" class="contact-botons">
+                    <span class="icon-text">
+                        <i class="fas fa-phone"></i>+34 93 888 77 55
+                    </span>
+                </a>
             </div>
             <div class="logo-container">
                 <img src="img/Logo.png" alt="Logo Els Coberts">

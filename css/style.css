@@ -184,13 +184,21 @@ body {
 .img-container {
   position: relative;
   width: 100%;
+  padding: 0.25rem;
+  border: solid 1px rgb(226, 223, 223);
+  border-radius: 10px;
 }
 
-.img-container img {
+.img-overlay{
+  position: relative;
+  width: 100%;
+}
+
+.img-overlay img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  
 }
 
 .overlay {
@@ -198,17 +206,16 @@ body {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity:0;
   color: white;
   font-size: 20px;
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
-  border-radius: 0 0 10px 10px;
 }
 
-.img-container:hover .overlay {
+.img-overlay:hover .overlay {
   opacity: 1;
 }
 
@@ -277,20 +284,20 @@ button[type="submit"]{
   border: none;
   color: #fff;
   cursor: pointer;
-  background-color: #1a13f9;
+  background-color: #007BFF;
 }
 
 /*------- Botó Reservar -------*/
-.reservar{
-    padding: 10px 22px;
-    border-radius: 6px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    background-color: #1a13f9;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
+.reservar-btn{
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #007BFF;
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
 }
 
 /*------- Footer -------*/
@@ -307,6 +314,12 @@ footer {
     justify-content: start;
     margin-left: 20px;
     gap: 10px;
+}
+
+.icon-text{
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo-container {
