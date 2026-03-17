@@ -105,39 +105,47 @@ body {
 }
 
 .carta-contain .el:nth-child(1){
-    grid-area: ele1
+    grid-area: ele1;
 }
 
 .carta-contain .el:nth-child(2){
-    grid-area: ele2
+    grid-area: ele2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .carta-contain .el:nth-child(3){
-    grid-area: ele3
+    grid-area: ele3;
 }
 
 .carta-contain .el:nth-child(4){
-    grid-area: ele4
+    grid-area: ele4;
 }
 
 .carta-contain .el:nth-child(5){
-    grid-area: ele5
+    grid-area: ele5;
 }
 
 .carta-contain .el:nth-child(6){
-    grid-area: ele6
+    grid-area: ele6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .carta-contain .el:nth-child(7){
-    grid-area: ele7
+    grid-area: ele7;
 }
 
 .carta-contain .el:nth-child(8){
-    grid-area: ele8
+    grid-area: ele8;
 }
 
 .carta-contain .el:nth-child(8){
-    grid-area: ele9
+    grid-area: ele9;
 }
 
 .carta-contain .el{
