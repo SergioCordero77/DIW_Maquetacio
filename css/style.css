@@ -3,15 +3,28 @@ html{
 }
 
 body {
-  font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*------- Estructura general -------*/
+
+.nosaltres-container,
+.carta-container,
+.galeria-container,
+.formulari-container {
+    width: 80%;
+    padding: 20px;
+    margin: auto;
 }
 
 /*------- Menú -------*/
 
 .menu-container{
-    border: solid 1px black;
-    background-color: grey;
+    background-color: black;
     position: sticky;
+    margin-bottom: 0;
     top: 0;
     z-index: 1;
 }
@@ -21,11 +34,12 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: end;
-    gap: 15px;
+    margin: 0;
+    gap: 10px;
 }
 
 .menu-principal li{
-    width: 6rem;
+    width: auto;
 }
 
 .menu-principal a{
@@ -33,8 +47,9 @@ body {
     text-align: center;
     border: solid 1px black;
     text-decoration: none;
-    color: black;
-    padding: 0.25rem;       
+    color:#fff;
+    padding: 5px 10px;
+    font-size: 0.9;       
 }
 
 .menu-principal a:hover {
@@ -47,22 +62,23 @@ body {
 
 /*------- Capçalera -------*/
 .main-image {
-    border: solid 1px black;
     width: 100%;
     height: 400px;
     display: flex;
     justify-content: start;
     align-items: center;
-    background-image: url("/img/Cuina.jpg");
+    margin-top: 0;
+    background-image: url(/DIW_Maquetacio/img/imatge_principal/imatge-restaurant.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
 .titol-container{
-    border: solid 1px black;
     width: auto;
     height: auto;
     margin-left: 50px;
+    color: #fff;
 }
 
 .titol-container > p:first-child {
@@ -70,38 +86,37 @@ body {
 }
 
 /*------- Sobre Nosaltres -------*/
-.nosaltres-container{
-    border: solid 1px black;
-    width: 80%;
-    padding: 20px;
-    margin: auto;
-    margin-top: 70px;
-}
 
-.nosaltres-contain-1,
-.nosaltres-contain-2 {
+.nosaltres-contain{
     display: flex;
-    align-items: center;
-    gap: 30px;             
-    margin-bottom: 40px;
+    flex-direction: column;
+    gap: 35px;
 }
 
 .nosaltres-contain img {
     width: 30%;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .nosaltres-contain p{
     width: 70%;
 }
 
+.nosaltres-contain-1,
+.nosaltres-contain-2 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 /*------- Carta -------*/
-.carta-container{
-    border: solid 1px black;
-    width: 80%;
-    padding: 20px;
-    margin: auto;
-    margin-top: 70px;
+
+.carta-contain .el{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
 }
 
 .carta-contain .el:nth-child(1){
@@ -110,10 +125,6 @@ body {
 
 .carta-contain .el:nth-child(2){
     grid-area: ele2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .carta-contain .el:nth-child(3){
@@ -130,10 +141,6 @@ body {
 
 .carta-contain .el:nth-child(6){
     grid-area: ele6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .carta-contain .el:nth-child(7){
@@ -144,12 +151,8 @@ body {
     grid-area: ele8;
 }
 
-.carta-contain .el:nth-child(8){
+.carta-contain .el:nth-child(9){
     grid-area: ele9;
-}
-
-.carta-contain .el{
-    border: solid 1px black;
 }
 
 .carta-contain {
@@ -163,78 +166,107 @@ body {
     gap: 15px;
 }
 
-/*------- Galeria de fotos -------*/
-.galeria-container{
-    border: solid 1px black;
-    width: 80%;
-    padding: 20px;
-    margin: auto;
-    margin-top: 70px;
+.carta-contain .el:nth-child(2),
+.carta-contain .el:nth-child(6){
+    background-color: rgb(226, 225, 225);
 }
 
-.galeria-contain-1, .galeria-contain-2{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px
+.carta-contain .num {
+    position: relative;
 }
 
-.galeria-contain-1 img, .galeria-contain-2 img{
+.carta-contain img {
     display: block;
     width: 100%;
     height: auto;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
 }
 
-.galeria-contain-2{
-    margin-top: 20px;
+.overlay-menu {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+/*------- Galeria de fotos -------*/
+
+.galeria-contain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.galeria-contain img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
 }
 
 .img-container {
-  position: relative;
-  width: 100%;
-  padding: 0.25rem;
-  border: solid 1px rgb(226, 223, 223);
-  border-radius: 10px;
+    position: relative;
+    width: 23%;
+    min-width: 200px;
+    padding: 0.25rem;
+    border: solid 1px rgb(226, 223, 223);
+    border-radius: 10px;
+}
+
+.img-container:hover{
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 .img-overlay{
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .img-overlay img {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
   
 }
 
 .overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  transition: 0.5s ease;
-  opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: 0.5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .img-overlay:hover .overlay {
-  opacity: 1;
+    opacity: 1;
+}
+
+.galeria-contain .img-container:nth-child(1) img, 
+.galeria-contain .img-container:nth-child(4) img,
+.galeria-contain .img-container:nth-child(5) img, 
+.galeria-contain .img-container:nth-child(8) img{
+    filter: brightness(60%);
 }
 
 /*------- Formulari -------*/
-.formulari-container{
-    border: solid 1px black;
-    width: 80%;
-    padding: 20px;
-    margin: auto;
-    margin-top: 70px;
-}
 
 .formulari{
     display: flex;
@@ -269,52 +301,53 @@ body {
 }
 
 label {
-  display: block;
-  padding-bottom: 0.5rem;
+    display: block;
+    padding-bottom: 0.5rem;
 }
 
 input,
 textarea {
-  width: 100%;
-  padding: 5px;
-  border: 1px solid black;
-  border-radius: 4px;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 textarea{
-  height: 80px;
+    height: 80px;
 }
 
 button[type="submit"]{
-  padding: 10px 22px;
-  border-radius: 6px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  background-color: #007BFF;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #007BFF;
 }
 
 /*------- Botó Reservar -------*/
 .reservar-btn{
-  padding: 10px 22px;
-  border-radius: 6px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  background-color: #007BFF;
-  position: fixed;
-  bottom: 80px;
-  right: 30px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #007BFF;
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
 }
 
 /*------- Footer -------*/
 footer {
-    background-color: grey;
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 70px;
+    padding: 0.5rem;
+    margin-top: 20px;
 }
 
 .contact-container {
@@ -338,9 +371,10 @@ footer {
 .footer-generic a{
     border: solid 1px black;
     text-decoration: none;
-    color: black;
+    color:#fff;
     padding: 10px;  
-    width: 11rem;     
+    width: 11rem;
+    font-size: 0.9rem;     
 }
 
 .logo-container img {
@@ -348,3 +382,7 @@ footer {
     width: 60px;
     height: auto;
 }
+
+
+
+
