@@ -1,15 +1,16 @@
+/* Tamany base del text */
 html{
     font-size: 20px;
 }
 
+/* Estil general del body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/*------- Estructura general -------*/
-
+/* Estructura general */
 .nosaltres-container,
 .carta-container,
 .galeria-container,
@@ -23,19 +24,19 @@ body {
 
 .menu-container{
     background-color: black;
-    position: sticky;
-    margin-bottom: 0;
-    top: 0;
-    z-index: 1;
+    position: sticky;   /* Sempre visible */
+    margin-bottom: 0;   /* Treiem els marges per sota */
+    top: 0;             /* Anclatge a la part superior de la pàgina */
+    z-index: 1;         /* Queda per sobre de tots els elements */
 }
 
 .menu-principal {
-    text-align: center;
-    list-style-type: none;
+    text-align: center;     /* Centrem el text */
+    list-style-type: none;  /* Treiem el subrallat que ve per defecte */
     display: flex;
-    justify-content: end;
+    justify-content: end;   /* Alineació al final del contenidor */
     margin: 0;
-    gap: 10px;
+    gap: 10px;              /* Espai entre elements */
 }
 
 .menu-principal li{
@@ -43,17 +44,17 @@ body {
 }
 
 .menu-principal a{
-    display: block;
+    display: block;         /* Ocupa l'espai disponible dins del <li> */
     text-align: center;
     border: solid 1px black;
     text-decoration: none;
     color:#fff;
-    padding: 5px 10px;
-    font-size: 0.9;       
+    padding: 5px 10px;      /* verticla 'a dalt i a sota' (5px) i vertical 'esquerra i dreta' (10px) */
+    font-size: 0.9rem;       
 }
 
-.menu-principal a:hover {
-    text-decoration: underline;
+.menu-principal a:hover {       /* Accions que es realitze quan passem el ratolí per sobre de l'element */
+    text-decoration: underline; /* Apareix subrallat */
 }
 
 .link{
@@ -64,39 +65,39 @@ body {
 .main-image {
     width: 100%;
     height: 400px;
-    position: relative;
+    position: relative; /* Per poder possar el text a sobre */
     margin-top: 0;
 }
 
 .main-image img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;  /* Ocupa tot el contenidor */
 }
 
 .titol-container{
-    position: absolute;
-    top: 35%;
-    left: 5%;
+    position: absolute; /* Ocupa l'espai disponible */
+    top: 35%;   /* Posicionament horitzontal*/
+    left: 5%;   /* Posicionament vertical */
     color: #fff;
 }
 
-.titol-container > p:first-child {
-    font-size: 30px;
+.titol-container > p:first-child {  /* Primer fill directe */
+    font-size: 1.5rem;
 }
 
 /*------- Sobre Nosaltres -------*/
 
 .nosaltres-contain{
     display: flex;
-    flex-direction: column;
-    gap: 35px;
+    flex-direction: column; /* Posicionament horitzontal */
+    gap: 35px;              /* Espai entre elements */
 }
 
 .nosaltres-contain img {
     width: 30%;
-    border-radius: 20px;
-    object-fit: cover;
+    border-radius: 20px;    /* Arrodonir cantonades */
+    object-fit: cover;      /* Ocupa tot el contenidor */
 }
 
 .nosaltres-contain p{
@@ -106,19 +107,20 @@ body {
 .nosaltres-contain-1,
 .nosaltres-contain-2 {
     display: flex;
-    align-items: center;
-    gap: 30px;
+    align-items: center;    /* Alineació vertical */
+    gap: 30px;              /* Espai entre elements */
 }
 
 /*------- Carta -------*/
 
 .carta-contain .el{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
+    justify-content: center;    /* Ocupa tot el contenidor */
+    align-items: center;        /* Alineació horitzontal */
+    text-align: left;           /* Alineació del text a l'esquerra */
 }
 
+/* Selecció d'elements pel grid a partir del dels fills del contenidor */
 .carta-contain .el:nth-child(1){
     grid-area: ele1;
 }
@@ -155,6 +157,7 @@ body {
     grid-area: ele9;
 }
 
+/* Estructura del grid */
 .carta-contain {
     display: grid;
     grid-template-columns:  10% 1fr 1fr;
@@ -259,11 +262,12 @@ body {
     opacity: 1;
 }
 
+/* Imatges que volem enfosquir */
 .galeria-contain .img-container:nth-child(1) img, 
 .galeria-contain .img-container:nth-child(4) img,
 .galeria-contain .img-container:nth-child(5) img, 
 .galeria-contain .img-container:nth-child(8) img{
-    filter: brightness(60%);
+    filter: brightness(60%);    /* Enfosquim l'imatge */
 }
 
 /*------- Formulari -------*/
