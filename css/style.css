@@ -1,3 +1,10 @@
+/* Variables */
+:root {
+    --color-principal: #007BFF;
+    --color-fosc: black;
+    --color-text: #fff;
+}
+
 /* Tamany base del text */
 html{
     font-size: 20px;
@@ -8,6 +15,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Estructura general */
@@ -16,14 +24,15 @@ body {
 .galeria-container,
 .formulari-container {
     width: 80%;
-    padding: 20px;
+    padding: 1rem;
     margin: auto;
+    box-sizing: border-box; /* Padding inclós dins del width */
 }
 
 /*------- Menú -------*/
 
 .menu-container{
-    background-color: black;
+    background-color: var(--color-fosc);
     position: sticky;   /* Sempre visible */
     margin-bottom: 0;   /* Treiem els marges per sota */
     top: 0;             /* Anclatge a la part superior de la pàgina */
@@ -36,7 +45,7 @@ body {
     display: flex;          /* Disposició en fila */
     justify-content: end;   /* Alineació al final del contenidor */
     margin: 0;
-    gap: 10px;              /* Espai entre elements */
+    gap: 0.5rem;            /* Espai entre elements */
 }
 
 .menu-principal li{
@@ -46,10 +55,10 @@ body {
 .menu-principal a{
     display: block;             /* Ocupa l'espai disponible dins del <li> */
     text-align: center;
-    border: solid 1px black;
+    border: solid 1px var(--color-fosc);
     text-decoration: none;      /* Eliminem el subrallat que ve per defecte */
-    color:#fff;
-    padding: 5px 10px;          /* verticla 'a dalt i a sota' (5px) i vertical 'esquerra i dreta' (10px) */
+    color: var(--color-text);
+    padding: 0.25rem 0.5rem;    /* verticla 'a dalt i a sota' (5px) i vertical 'esquerra i dreta' (10px) */
     font-size: 0.9rem;       
 }
 
@@ -64,7 +73,7 @@ body {
 /*------- Capçalera -------*/
 .main-image {
     width: 100%;
-    height: 400px;
+    height: 20rem;
     position: relative; /* Per poder possar el text a sobre */
     margin-top: 0;
 }
@@ -79,7 +88,7 @@ body {
     position: absolute; /* Posicionament respecte al contenidor pare */
     top: 35%;           /* Posicionament horitzontal*/
     left: 5%;           /* Posicionament vertical */
-    color: #fff;
+    color: var(--color-text);
 }
 
 .titol-container > p:first-child {  /* Primer fill directe */
@@ -91,7 +100,7 @@ body {
 .nosaltres-contain{
     display: flex;          /* Disposició en fila */
     flex-direction: column; /* Posicionament horitzontal */
-    gap: 35px;              /* Espai entre elements */
+    gap: 1.75rem;           /* Espai entre elements */
 }
 
 .nosaltres-contain img {
@@ -108,7 +117,7 @@ body {
 .nosaltres-contain-2 {
     display: flex;          /* Disposició en fila */
     align-items: center;    /* Alineació vertical */
-    gap: 30px;              /* Espai entre elements */
+    gap: 1.5rem;            /* Espai entre elements */
 }
 
 /*------- Carta -------*/
@@ -166,7 +175,7 @@ body {
                             "ele2 ele4 ele5"
                             "ele6 ele7 ele7"
                             "ele6 ele8 ele9";
-    gap: 15px;
+    gap: 0.75rem;
 }
 
 .carta-contain .el:nth-child(2),
@@ -183,7 +192,7 @@ body {
     width: 100%;
     height: auto;
     max-width: 100%;
-    max-height: 200px;
+    max-height: 10rem;
     object-fit: cover;      /* Ocupa tot el contenidor */
 }
 
@@ -194,7 +203,7 @@ body {
     width: 100%;
     color: white;
     font-size: 1rem;
-    padding: 20px;
+    padding: 1rem;
     text-align: center;
     box-sizing: border-box;             /* Padding inclós dins del width */
     opacity: 1;                         /* Sempre visible */
@@ -206,7 +215,7 @@ body {
     display: flex;                      /* Disposició en fila */
     align-items: center;                /* Alineació vertical */
     justify-content: space-between;     /* Espai entre elements */
-    gap: 15px;
+    gap: 0.75rem;
     flex-wrap: wrap;                    /* Quan la pàgina es minimitza, les imatges salten a la següent linia */
 }
 
@@ -215,14 +224,14 @@ body {
     width: 100%;
     height: auto;
     max-width: 100%;
-    max-height: 200px;
+    max-height: 10rem;
     object-fit: cover;      /* Ocupa tot el contenidor */
 }
 
 .img-container {
     position: relative;     /* Per poder possar el text a sobre */
     width: 23%;
-    min-width: 200px;
+    min-width: 10rem;
     padding: 0.25rem;
     border: solid 1px rgb(226, 223, 223);
     border-radius: 10px;    /* Arrodoniment de les cantonades */
@@ -230,6 +239,10 @@ body {
 
 .img-container:hover{                                     /* Quan passem el ratolí per sobre */
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);     /* Sombrejat */
+}
+
+.img-container:hover img {      /* Quan passem el ratolí per sobre */
+    filter: brightness(60%);    /* Enfosquim l'imatge */
 }
 
 .img-overlay{
@@ -253,7 +266,7 @@ body {
     opacity:0;                          /* Queda ocult */
     color: white;
     font-size: 1rem;
-    padding: 20px;
+    padding: 1rem;
     text-align: center;
     box-sizing: border-box;             /* Padding inclós dins del width */
 }
@@ -276,16 +289,16 @@ body {
     display: flex;              /* Disposició en fila */
     flex: 1 0 0;                /* Si hi ha espai lliure al contenidor, l'element l'ocupa (grow). Si hi ha més elements, es reparteixen l'espai */
     flex-direction: column;     /* Direcció en vertical */
-    padding: 0 30px;
+    padding: 0 1.5rem;
     box-sizing: border-box;     /* Padding inclós dins del width */
-    gap: 20px;
+    gap: 1rem;
 }
 
 .fila{
     display: flex;              /* Disposició en fila */
     flex: 1 0 0;                /* Si hi ha espai lliure al contenidor, l'element l'ocupa (grow). Si hi ha més elements, es reparteixen l'espai */
     flex-direction: row;        /* direcció en fila */
-    gap: 100px;
+    gap: 5rem;
     box-sizing: border-box;     /* Padding inclós dins del width */
 }
 
@@ -312,81 +325,76 @@ label {
 input,
 textarea {
     width: 100%;
-    padding: 5px;
-    border: 1px solid black;
+    padding: 0.25rem;
+    border: 1px solid var(--color-fosc);
     border-radius: 4px;             /* Arrodoniment de les cantonades */
     box-sizing: border-box;         /* Padding inclós dins del width */
 }
 
 textarea{
-    height: 80px;
+    height: 4rem;
 }
 
 button[type="submit"]{
-    padding: 10px 22px;
+    padding: 0.5rem 1.1rem;
     border-radius: 6px;             /* Arrodoniment de les cantonades */
     border: none;
-    color: #fff;
+    color: var(--color-text);
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: var(--color-principal);
 }
 
 /*------- Botó Reservar -------*/
 .reservar-btn{
-    padding: 10px 22px;
+    padding: 0.5rem 1.1rem;
     border-radius: 6px;             /* Arrodoniment de les cantonades */
     border: none;
-    color: #fff;
+    color: var(--color-text);
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: var(--color-principal);
     position: fixed;                /* Posicionament fixe: es veu en tot moment */
-    bottom: 80px;                   /* Posició desde sota */
-    right: 30px;                    /* Posició desde la dreta */
+    bottom: 4rem;                   /* Posició desde sota */
+    right: 1.5rem;                  /* Posició desde la dreta */
 }
 
 /*------- Footer -------*/
 footer {
-    background-color: black;
+    background-color: var(--color-fosc);;
     display: flex;                      /* Disposició en fila */
     justify-content: space-between;     /* Espai entre elements */
     align-items: center;                /* Alineació vertical */
     padding: 0.5rem;
-    margin-top: 20px;
+    margin-top: 1rem;
 }
 
 .contact-container {
     display: flex;                  /* Disposició en fila */
     justify-content: start;         /* Alineació a l'esquerra (al començament) */
-    margin-left: 20px;
-    gap: 10px;
+    margin-left: 1rem;
+    gap: 0.5rem;
 }
 
 .icon-text{
     display: flex;                  /* Disposició en fila */
     align-items: center;            /* Alineació vertical */
-    gap: 12px;
+    gap: 0.6rem;
 }
 
 .logo-container {
     justify-content: end;           /* Alineació a la dreta (al final) */
-    margin-right: 20px;
+    margin-right: 1rem;
 }
 
 .footer-generic a{
-    border: solid 1px black;
     text-decoration: none;          /* Eliminem el subrallat per defecte */
-    color:#fff;
-    padding: 10px;  
+    color: var(--color-text);
+    padding: 0.5rem;  
     width: 11rem;
     font-size: 0.9rem;     
 }
 
 .logo-container img {
     border-radius: 50%;             /* Arrodoniment de les cantonades */
-    width: 60px;
+    width: 3rem;
     height: auto;
 }
-
-
-
-

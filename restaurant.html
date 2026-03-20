@@ -15,231 +15,232 @@
     </head>
     <body> 
         <!-- MENÚ DE NAVEGACIÓ -->
-        <nav class="menu-container">
+        <nav class="menu-container" aria-label="Menú principal">
             <ul class="menu-principal">
-                <li class="link"><a href="#nosaltres">Nosaltres</a></li>
-                <li class="link"><a href="#carta">Carta</a></li>
-                <li class="link"><a href="#galeria">Galeria</a></li>
+                <li class="link"><a href="#nosaltres" aria-label="Anar a la secció Sobre nosaltres">Nosaltres</a></li>
+                <li class="link"><a href="#carta" aria-label="Anar a la secció Carta">Carta</a></li>
+                <li class="link"><a href="#galeria" aria-label="Anar a la secció Galeria">Galeria</a></li>
             </ul>
         </nav>
         
-        <!-- IMATGE PRINCIPAL DE LA PÀGINA -->
-        <section class="introduction-img">
-            <div class = "main-image">
-                <!-- IMATGE DE FONS -->
-                <img src="img/imatge_principal/imatge-restaurant.jpg" alt="Imatge principal: barra del restaurant">
-                <div class = "titol-container">
-                    <p>Restaurant <strong>Els Coberts</strong></p> <!-- <strong> per posar el text en negreta -->
-                    <p>El restaurant innovador del centre de Barcelona.</p>
+        <main>
+            <!-- IMATGE PRINCIPAL DE LA PÀGINA -->
+            <section class="introduction-img">
+                <div class = "main-image">
+                    <!-- IMATGE DE FONS -->
+                    <img src="img/imatge_principal/imatge-restaurant.jpg" alt="Imatge principal: barra del restaurant">
+                    <div class = "titol-container">
+                        <p>Restaurant <strong>Els Coberts</strong></p> <!-- <strong> per posar el text en negreta -->
+                        <p>El restaurant innovador del centre de Barcelona.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- SECCIÓ 'Sobre Nosaltres' -->
-        <section class="nosaltres-container" id="nosaltres"> <!-- es posa 'id' per poder-lo enllaçar amb els links del navegador -->
-            <h2>Sobre nosaltres</h2>
-            <div class ="nosaltres-contain">
-                <!-- Bloc 1 -->
-                <div class="nosaltres-contain-1">
-                    <img src="img/nosaltres/sala.jpg" alt="Sala del restaurant">
-                    <!-- Text superpossat -->
-                    <p>Situat al cor del barri de Gràcia, aquest restaurant de luxe ofereix una experiència gastronòmica exclusiva en un ambient elegant i acollidor. L’espai combina disseny contemporani amb detalls càlids que conviden a gaudir d’un àpat tranquil i sofisticat. Cada racó està pensat per crear una atmosfera íntima, ideal tant per a ocasions especials com per descobrir l’alta cuina en un entorn únic de Barcelona. Les llums subtils i la decoració cuidada creen una sensació d’exclusivitat, mentre que la música ambiental acompanya els moments gastronòmics amb suavitat. Els materials nobles i els acabats artesanals reforcen la sensació de luxe i confort. Tot plegat convida a viure una experiència completa més enllà del simple menjar, on cada detall compta. Els cambrers ofereixen un servei atent i discret, assegurant que cada visita sigui personalitzada i memorable. La combinació d’arquitectura, ambient i gastronomia converteix aquest lloc en un referent de sofisticació al barri de Gràcia.</p>
-                </div>
-                <!-- Bloc 2 -->
-                <div class="nosaltres-contain-2">
-                    <p>La cuina del restaurant destaca per la seva fusió entre tradició i innovació, utilitzant productes de proximitat i de temporada amb una execució impecable. S’hi apliquen tècniques modernes com coccions a baixa temperatura, emulsions delicades i presentacions artístiques que potencien els sabors naturals. L’objectiu és oferir plats equilibrats i sorprenents, convertint cada degustació en una experiència gastronòmica refinada i memorable. Els xefs treballen amb precisió i creativitat, combinant textures i aromes per despertar tots els sentits. La innovació es complementa amb un profund respecte pels ingredients, garantint qualitat i frescor en cada plat. Cada servei es concep com un petit espectacle culinari, on la tècnica i l’art es troben per sorprendre i delectar el comensal.</p>
-                    <img src="img/nosaltres/cuina.jpg" alt="Cuina del restaurant">
-                </div>
-            </div>
-        </section>
-        
-        <!-- SECCIÓ "Carta" -->
-        <section class="carta-container" id="carta"> <!-- es posa 'id' per poder-lo enllaçar amb els links del navegador -->
-            <h2>Carta</h2>
-            <!-- Contenidor en grid-template-areas -->    
-            <div class="carta-contain">
-                <!-- Títol general dels menús -->    
-                <div class="el">
-                    <span class="num">
-                        <h3>Menús de la temporada</h3>
-                    </span>
-                </div>
-                <!-- Menú 1 -->
-                <div class="el"><span class="num">Menú 1</span></div>
-                <div class="el">
-                    <!-- Nom i descripció del menú 1 -->
-                    <span class="num">
-                        <h4>Éclat de Tonina</h4>
-                        <p>Aquest menú s’ha dissenyat per oferir una experiència gastronòmica que combini la frescor del mar amb la sofisticació de la cuina de terra. Les tècniques aplicades inclouen tallat i emplatat delicat, coccions precises i elaboració de salses equilibrades que potencien els sabors naturals dels ingredients. L’objectiu és que el comensal gaudeixi d’un recorregut harmoniós entre textures i aromes, des de la frescor i suavitat del tartar de tonyina fins a la intensitat i elegància del filet Rossini, creant un àpat refinat, equilibrat i absolutament memorable.</p>
-                    </span>
-                </div>
-                <!-- Imatge del plat 1 del menú 1 -->
-                <div class="el">
-                    <span class="num">
-                        <img src="img/menu/tartar-tonyina.jpg" alt="Tartar de tonyina">
-                        <div class="overlay-menu">Tartar de tonyina</div>
-                    </span>
-                </div>
-                <!-- Imatge del plat 2 del menú 1 -->
-                <div class="el">
-                    <span class="num">
-                        <img src="img/menu/filet-rossini.jpg" alt="Filet rossini">
-                        <div class="overlay-menu">Filet rossini</div>
-                    </span>
-                </div>
-                <!-- Menú 2 -->
-                <div class="el"><span class="num">Menú 2</span></div>
-                <!-- Nom i descripció del menú 2 -->
-                <div class="el">
-                    <span class="num">
-                        <h4>Boscos i Mar</h4>
-                        <p>Aquest menú s’ha concebut per oferir una experiència gastronòmica que fusioni sabors naturals del bosc i del mar amb una presentació elegant. Les tècniques aplicades inclouen coccions lentes, manipulació delicada de productes frescos i combinacions de textures sorprenents, sempre buscant potenciar els sabors originals dels ingredients. L’objectiu és que el comensal gaudeixi d’un recorregut equilibrat i sofisticat, des de la suavitat i aroma dels farcells de boletus fins a la frescor i delicadesa del salmó, oferint un àpat refinat, creatiu i inoblidable.</p>
-                    </span>
-                </div>
-                <!-- Imatge del plat 1 del menú 2 -->
-                <div class="el">
-                    <span class="num">
-                         <img src="img/menu/farcell-boletus.jpg" alt="Farcells de boletus">
-                         <div class="overlay-menu">Salmó</div>
-                    </span>
-                </div>
-                <!-- Imatge del plat 2 del menú 2 -->
-                <div class="el">
-                    <span class="num">
-                         <img src="img/menu/salmo.jpg" alt="Salmó">
-                         <div class="overlay-menu">Farcells de boletus</div>
-                    </span>
-                </div>
-            </div>
-        </section>
-        
-        <!-- SECCIÓ "Galeria" -->
-        <section class="galeria-container" id="galeria"> <!-- es posa 'id' per poder-lo enllaçar amb els links del navegador -->
-            <h2>Galeria de fotos</h2>
-            <!-- Contenidor d'imatges -->
-            <div class="galeria-contain">
-                <!-- Les 4 primeres imatges que van adalt -->
-                <!-- Imatge amb overlay -->
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <img src="img/galeria/amanida.jpg" alt="Amanida">
-                        <div class="overlay">Amanida</div>
+            <!-- SECCIÓ 'Sobre Nosaltres' -->
+            <section class="nosaltres-container" aria-label="Secció Sobre nosaltres" id="nosaltres"> <!-- es posa 'id' per poder-lo enllaçar amb els links del navegador -->
+                <h2>Sobre nosaltres</h2>
+                <div class ="nosaltres-contain">
+                    <!-- Bloc 1 -->
+                    <div class="nosaltres-contain-1">
+                        <img src="img/nosaltres/sala.jpg" alt="Sala del restaurant">
+                        <!-- Text superpossat -->
+                        <p>Situat al cor del barri de Gràcia, aquest restaurant de luxe ofereix una experiència gastronòmica exclusiva en un ambient elegant i acollidor. L’espai combina disseny contemporani amb detalls càlids que conviden a gaudir d’un àpat tranquil i sofisticat. Cada racó està pensat per crear una atmosfera íntima, ideal tant per a ocasions especials com per descobrir l’alta cuina en un entorn únic de Barcelona. Les llums subtils i la decoració cuidada creen una sensació d’exclusivitat, mentre que la música ambiental acompanya els moments gastronòmics amb suavitat. Els materials nobles i els acabats artesanals reforcen la sensació de luxe i confort. Tot plegat convida a viure una experiència completa més enllà del simple menjar, on cada detall compta. Els cambrers ofereixen un servei atent i discret, assegurant que cada visita sigui personalitzada i memorable. La combinació d’arquitectura, ambient i gastronomia converteix aquest lloc en un referent de sofisticació al barri de Gràcia.</p>
+                    </div>
+                    <!-- Bloc 2 -->
+                    <div class="nosaltres-contain-2">
+                        <p>La cuina del restaurant destaca per la seva fusió entre tradició i innovació, utilitzant productes de proximitat i de temporada amb una execució impecable. S’hi apliquen tècniques modernes com coccions a baixa temperatura, emulsions delicades i presentacions artístiques que potencien els sabors naturals. L’objectiu és oferir plats equilibrats i sorprenents, convertint cada degustació en una experiència gastronòmica refinada i memorable. Els xefs treballen amb precisió i creativitat, combinant textures i aromes per despertar tots els sentits. La innovació es complementa amb un profund respecte pels ingredients, garantint qualitat i frescor en cada plat. Cada servei es concep com un petit espectacle culinari, on la tècnica i l’art es troben per sorprendre i delectar el comensal.</p>
+                        <img src="img/nosaltres/cuina.jpg" alt="Cuina del restaurant">
                     </div>
                 </div>
-                <!-- Imatge amb overlay -->
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <img src="img/galeria/pasta.jpg" alt="Pasta amb tomàquet">
-                        <div class="overlay">Pasta</div>
-                    </div>
-                </div>
-                <!-- Imatge amb overlay -->
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <img src="img/galeria/estofat-vadella.jpg" alt="Estofat de vadella">
-                        <div class="overlay">Estofat</div>
-                    </div>
-                </div>
-                <!-- Imatge amb overlay -->
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <img src="img/galeria/anec.jpg" alt="Ànec">
-                        <div class="overlay">Ànec</div>
-                    </div>
-                </div>
-                
-                <!-- Les 4 darreres imatges que van a sota -->
-                 <!-- Imatge amb overlay -->
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <img src="img/galeria/xai.jpg" alt="Xai">
-                        <div class="overlay">Xai</div>
-                    </div>
-                </div>
-                <!-- Imatge amb overlay -->
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <img src="img/galeria/pop.jpg" alt="Pop">
-                        <div class="overlay">Pop</div>
-                    </div>
-                </div>
-                <!-- Imatge amb overlay -->
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <img src="img/galeria/canelons.jpg" alt="Canelons">
-                        <div class="overlay">Canelons</div>
-                    </div>
-                </div>
-                <!-- Imatge amb overlay -->
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <img src="img/galeria/tacos.jpg" alt="Salmó">
-                        <div class="overlay">Tacos</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- SECCIÓ "Formular" -->
-        <section class="formulari-container" id="reservar"> <!-- es posa 'id' per poder-lo enllaçar amb els links del navegador i el botó flotant -->
-            <h2>Reservar</h2>
+            </section>
             
-            <form action="reserva.html" method="get"> <!-- Quan el formulari està ben complert i apretem el botó d'enviar ens redirigeix a una altra pagina que confirma la reserva -->
-                <div class="formulari">
-                    <!-- Fila amb dos camps -->    
-                    <div class="fila">
-                        <div class="columna"> 
-                            <label for="nom">Nom</label>
-                            <input type="text" id="nom" name="nom"  placeholder="Escriu el teu nom" required>
-                        </div>
-                        <div class="columna">
-                            <label for="numero">Número de persones</label>
-                            <input type="number" id="numero" name="numero" min="1" placeholder="1" required>
+            <!-- SECCIÓ "Carta" -->
+            <section class="carta-container" aria-label="Secció Carta" id="carta"> <!-- es posa 'id' per poder-lo enllaçar amb els links del navegador -->
+                <h2>Carta</h2>
+                <!-- Contenidor en grid-template-areas -->    
+                <div class="carta-contain">
+                    <!-- Títol general dels menús -->    
+                    <div class="el">
+                        <span class="num">
+                            <h3>Menús de la temporada</h3>
+                        </span>
+                    </div>
+                    <!-- Menú 1 -->
+                    <div class="el"><span class="num">Menú 1</span></div>
+                    <div class="el">
+                        <!-- Nom i descripció del menú 1 -->
+                        <span class="num">
+                            <h4>Éclat de Tonina</h4>
+                            <p>Aquest menú s’ha dissenyat per oferir una experiència gastronòmica que combini la frescor del mar amb la sofisticació de la cuina de terra. Les tècniques aplicades inclouen tallat i emplatat delicat, coccions precises i elaboració de salses equilibrades que potencien els sabors naturals dels ingredients. L’objectiu és que el comensal gaudeixi d’un recorregut harmoniós entre textures i aromes, des de la frescor i suavitat del tartar de tonyina fins a la intensitat i elegància del filet Rossini, creant un àpat refinat, equilibrat i absolutament memorable.</p>
+                        </span>
+                    </div>
+                    <!-- Imatge del plat 1 del menú 1 -->
+                    <div class="el">
+                        <span class="num">
+                            <img src="img/menu/tartar-tonyina.jpg" alt="Tartar de tonyina">
+                            <div class="overlay-menu">Tartar de tonyina</div>
+                        </span>
+                    </div>
+                    <!-- Imatge del plat 2 del menú 1 -->
+                    <div class="el">
+                        <span class="num">
+                            <img src="img/menu/filet-rossini.jpg" alt="Filet rossini">
+                            <div class="overlay-menu">Filet rossini</div>
+                        </span>
+                    </div>
+                    <!-- Menú 2 -->
+                    <div class="el"><span class="num">Menú 2</span></div>
+                    <!-- Nom i descripció del menú 2 -->
+                    <div class="el">
+                        <span class="num">
+                            <h4>Boscos i Mar</h4>
+                            <p>Aquest menú s’ha concebut per oferir una experiència gastronòmica que fusioni sabors naturals del bosc i del mar amb una presentació elegant. Les tècniques aplicades inclouen coccions lentes, manipulació delicada de productes frescos i combinacions de textures sorprenents, sempre buscant potenciar els sabors originals dels ingredients. L’objectiu és que el comensal gaudeixi d’un recorregut equilibrat i sofisticat, des de la suavitat i aroma dels farcells de boletus fins a la frescor i delicadesa del salmó, oferint un àpat refinat, creatiu i inoblidable.</p>
+                        </span>
+                    </div>
+                    <!-- Imatge del plat 1 del menú 2 -->
+                    <div class="el">
+                        <span class="num">
+                            <img src="img/menu/farcell-boletus.jpg" alt="Farcells de boletus">
+                            <div class="overlay-menu">Salmó</div>
+                        </span>
+                    </div>
+                    <!-- Imatge del plat 2 del menú 2 -->
+                    <div class="el">
+                        <span class="num">
+                            <img src="img/menu/salmo.jpg" alt="Salmó">
+                            <div class="overlay-menu">Farcells de boletus</div>
+                        </span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SECCIÓ "Galeria" -->
+            <section class="galeria-container" aria-label="Secció Galeria" id="galeria"> <!-- es posa 'id' per poder-lo enllaçar amb els links del navegador -->
+                <h2>Galeria de fotos</h2>
+                <!-- Contenidor d'imatges -->
+                <div class="galeria-contain">
+                    <!-- Les 4 primeres imatges que van adalt -->
+                    <!-- Imatge amb overlay -->
+                    <div class="img-container">
+                        <div class="img-overlay">
+                            <img src="img/galeria/amanida.jpg" alt="Amanida">
+                            <div class="overlay">Amanida</div>
                         </div>
                     </div>
-                    <!-- Fila amb dos camps -->
-                    <div class="fila">
-                        <div class="columna">
-                            <label for="data">Data</label>
-                            <input type="date" id="data" name="data" value="data" required>
-                        </div>
-                        <div class="columna">
-                            <label for="hora">Hora</label>
-                            <input type="time" id="hora" name="hora" value="hora" required>
+                    <!-- Imatge amb overlay -->
+                    <div class="img-container">
+                        <div class="img-overlay">
+                            <img src="img/galeria/pasta.jpg" alt="Pasta amb tomàquet">
+                            <div class="overlay">Pasta</div>
                         </div>
                     </div>
-                    <!-- Fila amb un camp -->
-                    <div class="fila">
-                        <div class="columna">
-                            <label for="missatge">Consideracions</label>
-                            <textarea id="missatge" name="missatge" placeholder="Explica’ns si hem d'adaptar algún dels menú..."></textarea>
+                    <!-- Imatge amb overlay -->
+                    <div class="img-container">
+                        <div class="img-overlay">
+                            <img src="img/galeria/estofat-vadella.jpg" alt="Estofat de vadella">
+                            <div class="overlay">Estofat</div>
                         </div>
                     </div>
-                    <!-- Fila amb el botó submit -->
-                    <div class="fila">
-                        <div class="columna-submit">
-                            <button type="submit">Enviar</button>
+                    <!-- Imatge amb overlay -->
+                    <div class="img-container">
+                        <div class="img-overlay">
+                            <img src="img/galeria/anec.jpg" alt="Ànec">
+                            <div class="overlay">Ànec</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Les 4 darreres imatges que van a sota -->
+                    <!-- Imatge amb overlay -->
+                    <div class="img-container">
+                        <div class="img-overlay">
+                            <img src="img/galeria/xai.jpg" alt="Xai">
+                            <div class="overlay">Xai</div>
+                        </div>
+                    </div>
+                    <!-- Imatge amb overlay -->
+                    <div class="img-container">
+                        <div class="img-overlay">
+                            <img src="img/galeria/pop.jpg" alt="Pop">
+                            <div class="overlay">Pop</div>
+                        </div>
+                    </div>
+                    <!-- Imatge amb overlay -->
+                    <div class="img-container">
+                        <div class="img-overlay">
+                            <img src="img/galeria/canelons.jpg" alt="Canelons">
+                            <div class="overlay">Canelons</div>
+                        </div>
+                    </div>
+                    <!-- Imatge amb overlay -->
+                    <div class="img-container">
+                        <div class="img-overlay">
+                            <img src="img/galeria/tacos.jpg" alt="Salmó">
+                            <div class="overlay">Tacos</div>
                         </div>
                     </div>
                 </div>
-            </form>
-        </section>
-
-        <!-- Botó flotant "Reservar" -->
-        <button class="reservar-btn" onclick="location.href='#reservar'">Reservar</button>
+            </section>
+            
+            <!-- SECCIÓ "Formular" -->
+            <section class="formulari-container" id="reservar"> <!-- es posa 'id' per poder-lo enllaçar amb els links del navegador i el botó flotant -->
+                <h2>Reservar</h2>
+                
+                <form aria-label="Formulari de reserva" action="reserva.html" method="get"> <!-- Quan el formulari està ben complert i apretem el botó d'enviar ens redirigeix a una altra pagina que confirma la reserva -->
+                    <div class="formulari">
+                        <!-- Fila amb dos camps -->    
+                        <div class="fila">
+                            <div class="columna"> 
+                                <label for="nom">Nom</label>
+                                <input type="text" id="nom" name="nom"  placeholder="Escriu el teu nom" required>
+                            </div>
+                            <div class="columna">
+                                <label for="numero">Número de persones</label>
+                                <input type="number" id="numero" name="numero" min="1" placeholder="1" required>
+                            </div>
+                        </div>
+                        <!-- Fila amb dos camps -->
+                        <div class="fila">
+                            <div class="columna">
+                                <label for="data">Data</label>
+                                <input type="date" id="data" name="data" value="data" required>
+                            </div>
+                            <div class="columna">
+                                <label for="hora">Hora</label>
+                                <input type="time" id="hora" name="hora" value="hora" required>
+                            </div>
+                        </div>
+                        <!-- Fila amb un camp -->
+                        <div class="fila">
+                            <div class="columna">
+                                <label for="missatge">Consideracions</label>
+                                <textarea id="missatge" name="missatge" placeholder="Explica’ns si hem d'adaptar algún dels menú..."></textarea>
+                            </div>
+                        </div>
+                        <!-- Fila amb el botó submit -->
+                        <div class="fila">
+                            <div class="columna-submit">
+                                <button type="submit">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+            <!-- Botó flotant "Reservar" -->
+            <button class="reservar-btn" aria-label="Anar al formulari de reserva" onclick="location.href='#reservar'">Reservar</button>
 
         <!-- FOOTER -->
-        <footer class="footer-generic">
+        <footer class="footer-generic" aria-label="Informació de contacte del restaurant">
             <!-- Contenidor de "contactes" a la part esquerra--> 
             <div class="contact-container">
                 <!-- Email -->
-                <a href="mailto:info@elscoberts.com" class="contact-botons">
+                <a href="mailto:info@elscoberts.com" aria-label="Enviar correu electrònic al restaurant" class="contact-botons">
                     <span class="icon-text">
                         <i class="fas fa-envelope"></i>info@elscoberts.com
                     </span>
                 </a>
                 <!-- Telèfon -->
-                <a href="tel:+34938887755" class="contact-botons">
+                <a href="tel:+34938887755" aria-label="Trucar al restaurant" class="contact-botons">
                     <span class="icon-text">
                         <i class="fas fa-phone"></i>+34 93 888 77 55
                     </span>
