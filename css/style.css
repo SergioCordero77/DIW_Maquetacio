@@ -33,7 +33,7 @@ body {
 .menu-principal {
     text-align: center;     /* Centrem el text */
     list-style-type: none;  /* Treiem el subrallat que ve per defecte */
-    display: flex;
+    display: flex;          /* Disposició en fila */
     justify-content: end;   /* Alineació al final del contenidor */
     margin: 0;
     gap: 10px;              /* Espai entre elements */
@@ -44,12 +44,12 @@ body {
 }
 
 .menu-principal a{
-    display: block;         /* Ocupa l'espai disponible dins del <li> */
+    display: block;             /* Ocupa l'espai disponible dins del <li> */
     text-align: center;
     border: solid 1px black;
-    text-decoration: none;
+    text-decoration: none;      /* Eliminem el subrallat que ve per defecte */
     color:#fff;
-    padding: 5px 10px;      /* verticla 'a dalt i a sota' (5px) i vertical 'esquerra i dreta' (10px) */
+    padding: 5px 10px;          /* verticla 'a dalt i a sota' (5px) i vertical 'esquerra i dreta' (10px) */
     font-size: 0.9rem;       
 }
 
@@ -76,9 +76,9 @@ body {
 }
 
 .titol-container{
-    position: absolute; /* Ocupa l'espai disponible */
-    top: 35%;   /* Posicionament horitzontal*/
-    left: 5%;   /* Posicionament vertical */
+    position: absolute; /* Posicionament respecte al contenidor pare */
+    top: 35%;           /* Posicionament horitzontal*/
+    left: 5%;           /* Posicionament vertical */
     color: #fff;
 }
 
@@ -89,7 +89,7 @@ body {
 /*------- Sobre Nosaltres -------*/
 
 .nosaltres-contain{
-    display: flex;
+    display: flex;          /* Disposició en fila */
     flex-direction: column; /* Posicionament horitzontal */
     gap: 35px;              /* Espai entre elements */
 }
@@ -106,7 +106,7 @@ body {
 
 .nosaltres-contain-1,
 .nosaltres-contain-2 {
-    display: flex;
+    display: flex;          /* Disposició en fila */
     align-items: center;    /* Alineació vertical */
     gap: 30px;              /* Espai entre elements */
 }
@@ -114,7 +114,7 @@ body {
 /*------- Carta -------*/
 
 .carta-contain .el{
-    display: flex;
+    display: flex;              /* Disposició en fila */
     justify-content: center;    /* Ocupa tot el contenidor */
     align-items: center;        /* Alineació horitzontal */
     text-align: left;           /* Alineació del text a l'esquerra */
@@ -160,8 +160,8 @@ body {
 /* Estructura del grid */
 .carta-contain {
     display: grid;
-    grid-template-columns:  10% 1fr 1fr;
-    grid-template-areas:    "ele1 ele1 ele1"
+    grid-template-columns:  10% 1fr 1fr;        /* Grandaria de les columnes */
+    grid-template-areas:    "ele1 ele1 ele1"    /* Disposició del grid */
                             "ele2 ele3 ele3"
                             "ele2 ele4 ele5"
                             "ele6 ele7 ele7"
@@ -175,91 +175,91 @@ body {
 }
 
 .carta-contain .num {
-    position: relative;
+    position: relative;     /* Converteix l’element en referència */
 }
 
 .carta-contain img {
-    display: block;
+    display: block;         /* Ocupa l'espai disponible */
     width: 100%;
     height: auto;
     max-width: 100%;
     max-height: 200px;
-    object-fit: cover;
+    object-fit: cover;      /* Ocupa tot el contenidor */
 }
 
 .overlay-menu {
-    position: absolute;
+    position: absolute;                 /* Posicionament respecte al contenidor pare */
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
     padding: 20px;
     text-align: center;
-    box-sizing: border-box;
-    opacity: 1;
+    box-sizing: border-box;             /* Padding inclós dins del width */
+    opacity: 1;                         /* Sempre visible */
 }
 
 /*------- Galeria de fotos -------*/
 
 .galeria-contain{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex;                      /* Disposició en fila */
+    align-items: center;                /* Alineació vertical */
+    justify-content: space-between;     /* Espai entre elements */
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;                    /* Quan la pàgina es minimitza, les imatges salten a la següent linia */
 }
 
 .galeria-contain img{
-    display: block;
+    display: block;         /* Ocupa l'espai disponible */
     width: 100%;
     height: auto;
     max-width: 100%;
     max-height: 200px;
-    object-fit: cover;
+    object-fit: cover;      /* Ocupa tot el contenidor */
 }
 
 .img-container {
-    position: relative;
+    position: relative;     /* Per poder possar el text a sobre */
     width: 23%;
     min-width: 200px;
     padding: 0.25rem;
     border: solid 1px rgb(226, 223, 223);
-    border-radius: 10px;
+    border-radius: 10px;    /* Arrodoniment de les cantonades */
 }
 
-.img-container:hover{
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+.img-container:hover{                                     /* Quan passem el ratolí per sobre */
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);     /* Sombrejat */
 }
 
 .img-overlay{
-    position: relative;
+    position: relative;     /* Per poder possar el text a sobre */
     width: 100%;
 }
 
 .img-overlay img {
-    display: block;
+    display: block;         /* Ocupa l'espai disponible */
     width: 100%;
     height: auto;
   
 }
 
 .overlay {
-    position: absolute;
+    position: absolute;                 /* Posicionament respecte al contenidor pare */
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     transition: 0.5s ease;
-    opacity:0;
+    opacity:0;                          /* Queda ocult */
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
     padding: 20px;
     text-align: center;
-    box-sizing: border-box;
+    box-sizing: border-box;             /* Padding inclós dins del width */
 }
 
-.img-overlay:hover .overlay {
-    opacity: 1;
+.img-overlay:hover .overlay {       /* Quan passem el ratolí per sobre */
+    opacity: 1;                     /* Overlay visible */
 }
 
 /* Imatges que volem enfosquir */
@@ -273,39 +273,39 @@ body {
 /*------- Formulari -------*/
 
 .formulari{
-    display: flex;
-    flex: 1 0 0;
-    flex-direction: column;
+    display: flex;              /* Disposició en fila */
+    flex: 1 0 0;                /* Si hi ha espai lliure al contenidor, l'element l'ocupa (grow). Si hi ha més elements, es reparteixen l'espai */
+    flex-direction: column;     /* Direcció en vertical */
     padding: 0 30px;
-    box-sizing: border-box;
+    box-sizing: border-box;     /* Padding inclós dins del width */
     gap: 20px;
 }
 
 .fila{
-    display: flex;
-    flex: 1 0 0;
-    flex-direction: row;
+    display: flex;              /* Disposició en fila */
+    flex: 1 0 0;                /* Si hi ha espai lliure al contenidor, l'element l'ocupa (grow). Si hi ha més elements, es reparteixen l'espai */
+    flex-direction: row;        /* direcció en fila */
     gap: 100px;
-    box-sizing: border-box;
+    box-sizing: border-box;     /* Padding inclós dins del width */
 }
 
-.columna{
-    display: flex;
-    flex: 1 0 0;
-    flex-direction: column;
-    box-sizing: border-box;
+.columna{                       
+    display: flex;              /* Disposició en fila */
+    flex: 1 0 0;                /* Si hi ha espai lliure al contenidor, l'element l'ocupa (grow). Si hi ha més elements, es reparteixen l'espai */
+    flex-direction: column;     /* direcció en vertical */
+    box-sizing: border-box;     /* Padding inclós dins del width */
 }
 
 .columna-submit{
-    display: flex;
-    flex: 1 0 0;
-    flex-direction: row;
-    justify-content: end;
-    box-sizing: border-box;
+    display: flex;              /* Disposició en fila */
+    flex: 1 0 0;                /* Si hi ha espai lliure al contenidor, l'element l'ocupa (grow). Si hi ha més elements, es reparteixen l'espai */
+    flex-direction: row;        /* direcció en fila */
+    justify-content: end;       /* Alineació a la dreta (al final) */
+    box-sizing: border-box;     /* Padding inclós dins del width */
 }
 
 label {
-    display: block;
+    display: block;             /* Ocupa l'espai disponible */
     padding-bottom: 0.5rem;
 }
 
@@ -314,8 +314,8 @@ textarea {
     width: 100%;
     padding: 5px;
     border: 1px solid black;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border-radius: 4px;             /* Arrodoniment de les cantonades */
+    box-sizing: border-box;         /* Padding inclós dins del width */
 }
 
 textarea{
@@ -324,7 +324,7 @@ textarea{
 
 button[type="submit"]{
     padding: 10px 22px;
-    border-radius: 6px;
+    border-radius: 6px;             /* Arrodoniment de les cantonades */
     border: none;
     color: #fff;
     cursor: pointer;
@@ -334,47 +334,47 @@ button[type="submit"]{
 /*------- Botó Reservar -------*/
 .reservar-btn{
     padding: 10px 22px;
-    border-radius: 6px;
+    border-radius: 6px;             /* Arrodoniment de les cantonades */
     border: none;
     color: #fff;
     cursor: pointer;
     background-color: #007BFF;
-    position: fixed;
-    bottom: 80px;
-    right: 30px;
+    position: fixed;                /* Posicionament fixe: es veu en tot moment */
+    bottom: 80px;                   /* Posició desde sota */
+    right: 30px;                    /* Posició desde la dreta */
 }
 
 /*------- Footer -------*/
 footer {
     background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;                      /* Disposició en fila */
+    justify-content: space-between;     /* Espai entre elements */
+    align-items: center;                /* Alineació vertical */
     padding: 0.5rem;
     margin-top: 20px;
 }
 
 .contact-container {
-    display: flex;
-    justify-content: start;
+    display: flex;                  /* Disposició en fila */
+    justify-content: start;         /* Alineació a l'esquerra (al començament) */
     margin-left: 20px;
     gap: 10px;
 }
 
 .icon-text{
-    display: flex;
-    align-items: center;
+    display: flex;                  /* Disposició en fila */
+    align-items: center;            /* Alineació vertical */
     gap: 12px;
 }
 
 .logo-container {
-    justify-content: end;
+    justify-content: end;           /* Alineació a la dreta (al final) */
     margin-right: 20px;
 }
 
 .footer-generic a{
     border: solid 1px black;
-    text-decoration: none;
+    text-decoration: none;          /* Eliminem el subrallat per defecte */
     color:#fff;
     padding: 10px;  
     width: 11rem;
@@ -382,7 +382,7 @@ footer {
 }
 
 .logo-container img {
-    border-radius: 50%;
+    border-radius: 50%;             /* Arrodoniment de les cantonades */
     width: 60px;
     height: auto;
 }
