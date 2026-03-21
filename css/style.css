@@ -18,6 +18,10 @@ body {
     overflow-x: hidden;
 }
 
+body p{                     /* S'aplica a tots els paràgrafs del body */
+    text-align: justify;    /* Alineació del text justificada */
+}
+
 /* Estructura general */
 .nosaltres-container,
 .carta-container,
