@@ -402,3 +402,28 @@ footer {
     width: 3rem;
     height: auto;
 }
+
+@media (max-width: 768px){
+
+/*------- Menú -------*/
+
+.menu-principal {
+    justify-content: center;   /* Alineació al centre del contenidor */
+}
+
+/*------- Capçalera -------*/
+
+.titol-container{
+    top: 20%;            /* Posicionament horitzontal*/
+    left: 25%;           /* Posicionament vertical */
+    width: 55%;
+}
+
+}
+
+@media (max-width: 576px){
+    .menu-principal {
+    justify-content: column;   /* Alineació vertical */
+}
+}
+
