@@ -100,7 +100,6 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
 }
 
 /*------- Sobre Nosaltres -------*/
-
 .nosaltres-contain{
     display: flex;          /* Disposició en fila */
     flex-direction: column; /* Posicionament horitzontal */
@@ -123,6 +122,7 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     align-items: center;    /* Alineació vertical */
     gap: 1.5rem;            /* Espai entre elements */
 }
+
 
 /*------- Carta -------*/
 
@@ -403,7 +403,17 @@ footer {
     height: auto;
 }
 
+/*----------------------------------------------- Versió tablet -----------------------------------------------*/
+
 @media (max-width: 768px){
+
+/* Estructura general */
+.nosaltres-container,
+.carta-container,
+.galeria-container,
+.formulari-container {
+    padding: 0.5rem;
+}
 
 /*------- Menú -------*/
 
@@ -419,7 +429,40 @@ footer {
     width: 55%;
 }
 
+/*------- Sobre Nosaltres -------*/
+
+.nosaltres-contain{
+    display: flex;          /* Disposició en fila */
+    flex-direction: column; /* Posicionament horitzontal */
+    gap: 1.75rem;           /* Espai entre elements */
+    box-sizing: border-box;
 }
+
+.nosaltres-contain-2 p{
+    width: 70%;
+}
+
+.nosaltres-contain-2 img{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.nosaltres-contain-1{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1.5rem;
+}
+
+.nosaltres-contain-2 {
+    display: flex;          /* Disposició en fila */
+    align-items: center;    /* Alineació vertical */
+    gap: 1.5rem;            /* Espai entre elements */
+    box-sizing: border-box;
+}
+
+/*----------------------------------------------- Versió móvil -----------------------------------------------*/
 
 @media (max-width: 576px){
     .menu-principal {
