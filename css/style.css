@@ -407,6 +407,11 @@ footer {
 
 @media (max-width: 768px){
 
+/* Tamany base del text */
+html{
+    font-size: 1.1rem;
+}
+
 /* Estructura general */
 .nosaltres-container,
 .carta-container,
@@ -462,8 +467,6 @@ footer {
     box-sizing: border-box;
 }
 
-/*------- Carta -------*/
-
 /* Estructura del grid */
 .carta-contain {
     display: grid;
@@ -478,12 +481,19 @@ footer {
     gap: 0.75rem;
 }
 
+/*------- Botó Reservar -------*/
+.reservar-btn{
+    padding: 0.3rem 0.9rem;
+    bottom: 3.5rem;                 /* Posició desde sota */
+    right: 1.2rem;                  /* Posició desde la dreta */
+}
+
 /*------- Footer -------*/
 
 .contact-container {
     display: flex;                  /* Disposició en fila */
     justify-content: center;         /* Alineació a l'esquerra (al començament) */
-    margin-left: 5rem;
+    margin-left: 7rem;
     gap: 0.5rem;
 }
 
@@ -491,11 +501,109 @@ footer {
     display: none;
 }
 
+
+}
+
 /*----------------------------------------------- Versió móvil -----------------------------------------------*/
 
 @media (max-width: 576px){
-    .menu-principal {
-    justify-content: column;   /* Alineació vertical */
+
+/* Tamany base del text */
+html{
+    font-size: 0.9rem;
 }
+
+/*------- Menú -------*/
+
+.menu-principal {
+    justify-content: center;    /* Alineació al centre del contenidor */
+    flex-direction: column;     /* Alineació en columna */
+}
+
+/*------- Capçalera -------*/
+.titol-container{
+    display: none;
+}
+
+/*------- Sobre Nosaltres -------*/
+
+.nosaltres-contain-1{
+    display: flex;          /* Disposició en fila */
+    flex-direction: column; /* Posicionament horitzontal */
+}
+
+.nosaltres-contain-2 {
+    display: flex;                  /* Disposició en fila */
+    flex-direction: column-reverse; /* Posicionament horitzontal */
+}
+
+.nosaltres-contain img {
+    width: 100%;
+}
+
+.nosaltres-contain p{
+    width: 100%;
+}
+
+/*------- Carta -------*/
+
+/* Selecció d'elements pel grid a partir del dels fills del contenidor */
+.carta-contain .el:nth-child(1){
+    display: none;
+}
+
+.carta-contain .el:nth-child(5){
+    margin-bottom: 2rem;
+}
+
+/* Estructura del grid */
+.carta-contain {
+    display: grid;
+    grid-template-columns:  100%;        /* Grandaria de les columnes */
+    grid-template-areas:    "ele2"    /* Disposició del grid */
+                            "ele3"
+                            "ele4"
+                            "ele5"
+                            "ele6"
+                            "ele7"
+                            "ele8" 
+                            "ele9";
+}
+
+/*------- Galeria de fotos -------*/
+
+.galeria-contain{
+    display: flex;                      /* Disposició en fila */
+    flex-direction: column;
+    justify-content: center;            /* Alineació al centre */
+}
+
+.img-container {
+    width: 100%;
+}
+
+/*------- Formulari -------*/
+
+.fila{
+    gap: 1rem;
+}
+
+button[type="submit"]{
+    flex-grow: 1 0 0;
+}
+
+/*------- Botó Reservar -------*/
+.reservar-btn{
+    padding: 0.1rem 0.7rem;
+    bottom: 3.5rem;                 /* Posició desde sota */
+    right: 0.7rem;                  /* Posició desde la dreta */
+}
+
+/*------- Footer -------*/
+
+.contact-container {
+    margin-left: 8.5rem;
+}
+
 }
 
