@@ -436,10 +436,21 @@ html{
 
 /*------- Sobre Nosaltres -------*/
 
-.nosaltres-contain{
+.nosaltres-contain-1{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1.5rem;
+}
+
+.nosaltres-contain-1 p{
+    width: 100%;
+}
+
+.nosaltres-contain-2 {
     display: flex;          /* Disposició en fila */
-    flex-direction: column; /* Posicionament horitzontal */
-    gap: 1.75rem;           /* Espai entre elements */
+    align-items: center;    /* Alineació vertical */
+    gap: 1.5rem;            /* Espai entre elements */
     box-sizing: border-box;
 }
 
@@ -453,19 +464,7 @@ html{
     object-fit: cover;
 }
 
-.nosaltres-contain-1{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 1.5rem;
-}
 
-.nosaltres-contain-2 {
-    display: flex;          /* Disposició en fila */
-    align-items: center;    /* Alineació vertical */
-    gap: 1.5rem;            /* Espai entre elements */
-    box-sizing: border-box;
-}
 
 /* Estructura del grid */
 .carta-contain {
