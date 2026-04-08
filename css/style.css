@@ -93,6 +93,8 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     top: 35%;           /* Posicionament horitzontal*/
     left: 5%;           /* Posicionament vertical */
     color: var(--color-text);
+    background-color: var(--color-fosc);
+    opacity: 80%;
 }
 
 .titol-container > p:first-child {  /* Primer fill directe */
@@ -431,7 +433,7 @@ html{
 .titol-container{
     top: 20%;            /* Posicionament horitzontal*/
     left: 25%;           /* Posicionament vertical */
-    width: 55%;
+    width: 50%;
 }
 
 /*------- Sobre Nosaltres -------*/
@@ -496,7 +498,7 @@ html{
 .contact-container {
     display: flex;                  /* Disposició en fila */
     justify-content: center;         /* Alineació a l'esquerra (al començament) */
-    margin-left: 7rem;
+    margin-left: 9rem;
     gap: 0.5rem;
 }
 
@@ -525,7 +527,7 @@ html{
 
 /*------- Capçalera -------*/
 .titol-container{
-    display: none;
+    display: none;      /* Ocultem el títol */
 }
 
 /*------- Sobre Nosaltres -------*/
