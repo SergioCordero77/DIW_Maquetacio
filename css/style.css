@@ -443,13 +443,14 @@ html{
     gap: 1.5rem;
 }
 
-.nosaltres-contain-1 p{
+.nosaltres-contain-1 p,
+.nosaltres-contain-1 img{
     width: 100%;
 }
 
 .nosaltres-contain-2 {
     display: flex;          /* Disposició en fila */
-    align-items: center;    /* Alineació vertical */
+    align-items: stretch;    /* Alineació vertical */
     gap: 1.5rem;            /* Espai entre elements */
     box-sizing: border-box;
 }
@@ -459,12 +460,10 @@ html{
 }
 
 .nosaltres-contain-2 img{
-    width: 50%;
+    width: 70%;
     height: auto;
     object-fit: cover;
 }
-
-
 
 /* Estructura del grid */
 .carta-contain {
@@ -478,6 +477,11 @@ html{
                             "ele6 ele8"
                             "ele6 ele9";
     gap: 0.75rem;
+}
+
+/*------- Galeria -------*/
+.img-container {
+    width: 45%;
 }
 
 /*------- Botó Reservar -------*/
