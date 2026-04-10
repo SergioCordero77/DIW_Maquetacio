@@ -367,6 +367,12 @@ button[type="submit"]{
     position: fixed;                /* Posicionament fixe: es veu en tot moment */
     bottom: 4rem;                   /* Posició desde sota */
     right: 1.5rem;                  /* Posició desde la dreta */
+    transition: 1s;
+}
+
+.reservar-btn:hover {      /* Quan passem el ratolí per sobre */
+    transform: scale(1.2);
+    transition: 1s;
 }
 
 /*------- Footer -------*/
