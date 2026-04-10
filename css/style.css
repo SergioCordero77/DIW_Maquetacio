@@ -241,6 +241,8 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     padding: 0.25rem;
     border: solid 1px rgb(226, 223, 223);
     border-radius: 10px;    /* Arrodoniment de les cantonades */
+    overflow: hidden;
+    transition: all 3s;
 }
 
 .img-container:hover{                                     /* Quan passem el ratolí per sobre */
@@ -249,11 +251,15 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
 
 .img-container:hover img {      /* Quan passem el ratolí per sobre */
     filter: brightness(60%);    /* Enfosquim l'imatge */
+    transform: scale(2) rotate(25deg);
+    filter: grayscale(100%);
+    transition: all 7s;
 }
 
 .img-overlay{
     position: relative;     /* Per poder possar el text a sobre */
     width: 100%;
+    overflow: hidden;
 }
 
 .img-overlay img {
