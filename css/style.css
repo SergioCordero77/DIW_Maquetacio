@@ -93,6 +93,8 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     top: 35%;           /* Posicionament horitzontal*/
     left: 5%;           /* Posicionament vertical */
     color: var(--color-text);
+    background-color: var(--color-fosc);
+    opacity: 80%;
 }
 
 .titol-container > p:first-child {  /* Primer fill directe */
