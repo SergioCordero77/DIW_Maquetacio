@@ -232,6 +232,7 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     max-width: 100%;
     max-height: 10rem;
     object-fit: cover;      /* Ocupa tot el contenidor */
+    transition: all 3s;
 }
 
 .img-container {
@@ -242,7 +243,6 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     border: solid 1px rgb(226, 223, 223);
     border-radius: 10px;    /* Arrodoniment de les cantonades */
     overflow: hidden;
-    transition: all 3s;
 }
 
 .img-container:hover{                                     /* Quan passem el ratolí per sobre */
