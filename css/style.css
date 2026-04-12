@@ -63,11 +63,14 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     text-decoration: none;      /* Eliminem el subrallat que ve per defecte */
     color: var(--color-text);
     padding: 0.25rem 0.5rem;    /* verticla 'a dalt i a sota' (5px) i vertical 'esquerra i dreta' (10px) */
-    font-size: 0.9rem;       
+    font-size: 0.9rem;
+    transition: 1s;       
 }
 
 .menu-principal a:hover {       /* Accions que es realitze quan passem el ratolí per sobre de l'element */
-    text-decoration: underline; /* Apareix subrallat */
+    text-decoration: underline; /* Apareix subrallat */           
+    transform: translateY(-3px);
+    transition: 1s;
 }
 
 .link{
@@ -415,4 +418,13 @@ footer {
     border-radius: 50%;             /* Arrodoniment de les cantonades */
     width: 3rem;
     height: auto;
+}
+
+.contact-botons i {
+    transition: 1s;
+}
+
+.contact-botons:hover i {
+    transform: rotateY(360deg);
+    transition: 1s;
 }
