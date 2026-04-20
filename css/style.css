@@ -430,3 +430,211 @@ footer {
     transform: rotateY(360deg);
     transition: 1s;
 }
+
+/*----------------------------------------------- Versió tablet -----------------------------------------------*/
+
+@media (max-width: 768px){
+
+/* Tamany base del text */
+html{
+    font-size: 1.1rem;
+}
+
+/* Estructura general */
+.nosaltres-container,
+.carta-container,
+.galeria-container,
+.formulari-container {
+    padding: 0.5rem;
+}
+
+/*------- Menú -------*/
+
+.menu-principal {
+    justify-content: center;   /* Alineació al centre del contenidor */
+}
+
+/*------- Capçalera -------*/
+
+.titol-container{
+    top: 20%;            /* Posicionament horitzontal*/
+    left: 25%;           /* Posicionament vertical */
+    width: 50%;
+}
+
+/*------- Sobre Nosaltres -------*/
+
+.nosaltres-contain-1{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1.5rem;
+}
+
+.nosaltres-contain-1 p,
+.nosaltres-contain-1 img{
+    width: 100%;
+}
+
+.nosaltres-contain-2 {
+    display: flex;          /* Disposició en fila */
+    align-items: stretch;    /* Alineació vertical */
+    gap: 1.5rem;            /* Espai entre elements */
+    box-sizing: border-box;
+}
+
+.nosaltres-contain-2 p{
+    width: 70%;
+}
+
+.nosaltres-contain-2 img{
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Estructura del grid */
+.carta-contain {
+    display: grid;
+    grid-template-columns:  15% 1fr;        /* Grandaria de les columnes */
+    grid-template-areas:    "ele1 ele1"    /* Disposició del grid */
+                            "ele2 ele3"
+                            "ele2 ele4"
+                            "ele2 ele5"
+                            "ele6 ele7"
+                            "ele6 ele8"
+                            "ele6 ele9";
+    gap: 0.75rem;
+}
+
+/*------- Galeria -------*/
+.img-container {
+    width: 45%;
+}
+
+/*------- Botó Reservar -------*/
+.reservar-btn{
+    padding: 0.3rem 0.9rem;
+    bottom: 3.5rem;                 /* Posició desde sota */
+    right: 1.2rem;                  /* Posició desde la dreta */
+}
+
+/*------- Footer -------*/
+
+.contact-container {
+    display: flex;                  /* Disposició en fila */
+    justify-content: center;         /* Alineació a l'esquerra (al començament) */
+    margin-left: 9rem;
+    gap: 0.5rem;
+}
+
+.logo-container {
+    display: none;
+}
+
+
+}
+
+/*----------------------------------------------- Versió móvil -----------------------------------------------*/
+
+@media (max-width: 576px){
+
+/* Tamany base del text */
+html{
+    font-size: 0.9rem;
+}
+
+/*------- Menú -------*/
+
+.menu-principal {
+    justify-content: center;    /* Alineació al centre del contenidor */
+    flex-direction: column;     /* Alineació en columna */
+}
+
+/*------- Capçalera -------*/
+.titol-container{
+    display: none;      /* Ocultem el títol */
+}
+
+/*------- Sobre Nosaltres -------*/
+
+.nosaltres-contain-1{
+    display: flex;          /* Disposició en fila */
+    flex-direction: column; /* Posicionament horitzontal */
+}
+
+.nosaltres-contain-2 {
+    display: flex;                  /* Disposició en fila */
+    flex-direction: column-reverse; /* Posicionament horitzontal */
+}
+
+.nosaltres-contain img {
+    width: 100%;
+}
+
+.nosaltres-contain p{
+    width: 100%;
+}
+
+/*------- Carta -------*/
+
+/* Selecció d'elements pel grid a partir del dels fills del contenidor */
+.carta-contain .el:nth-child(1){
+    display: none;
+}
+
+.carta-contain .el:nth-child(5){
+    margin-bottom: 2rem;
+}
+
+/* Estructura del grid */
+.carta-contain {
+    display: grid;
+    grid-template-columns:  100%;        /* Grandaria de les columnes */
+    grid-template-areas:    "ele2"    /* Disposició del grid */
+                            "ele3"
+                            "ele4"
+                            "ele5"
+                            "ele6"
+                            "ele7"
+                            "ele8" 
+                            "ele9";
+}
+
+/*------- Galeria de fotos -------*/
+
+.galeria-contain{
+    display: flex;                      /* Disposició en fila */
+    flex-direction: column;
+    justify-content: center;            /* Alineació al centre */
+}
+
+.img-container {
+    width: 100%;
+}
+
+/*------- Formulari -------*/
+
+.fila{
+    gap: 1rem;
+}
+
+button[type="submit"]{
+    flex-grow: 1 0 0;
+}
+
+/*------- Botó Reservar -------*/
+.reservar-btn{
+    padding: 0.1rem 0.7rem;
+    bottom: 3.5rem;                 /* Posició desde sota */
+    right: 0.7rem;                  /* Posició desde la dreta */
+}
+
+/*------- Footer -------*/
+
+.contact-container {
+    margin-left: 8.5rem;
+}
+
+}
+
