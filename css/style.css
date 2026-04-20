@@ -100,6 +100,19 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     opacity: 80%;
     background-color: var(--color-fosc);
     opacity: 80%;
+    animation-name: portada;
+    animation-duration: 2s;
+}
+
+@keyframes portada {
+    from {
+        top: 70%;
+        opacity: 0%;
+    }
+    to {
+        top: 35%;
+        opacity: 80%;
+    }
 }
 
 .titol-container > p:first-child {  /* Primer fill directe */
