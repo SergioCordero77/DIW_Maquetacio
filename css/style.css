@@ -98,6 +98,8 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     color: var(--color-text);
     background-color: var(--color-fosc);
     opacity: 80%;
+    background-color: var(--color-fosc);
+    opacity: 80%;
 }
 
 .titol-container > p:first-child {  /* Primer fill directe */
@@ -105,7 +107,6 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
 }
 
 /*------- Sobre Nosaltres -------*/
-
 .nosaltres-contain{
     display: flex;          /* Disposició en fila */
     flex-direction: column; /* Posicionament horitzontal */
@@ -128,6 +129,7 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     align-items: center;    /* Alineació vertical */
     gap: 1.5rem;            /* Espai entre elements */
 }
+
 
 /*------- Carta -------*/
 
