@@ -102,14 +102,14 @@
                     <div class="el">
                         <span class="num">
                             <img src="img/menu/farcell-boletus.jpg" alt="Farcells de boletus">
-                            <div class="overlay-menu">Salmó</div>
+                            <div class="overlay-menu">Farcells de boletus</div>
                         </span>
                     </div>
                     <!-- Imatge del plat 2 del menú 2 -->
                     <div class="el">
                         <span class="num">
                             <img src="img/menu/salmo.jpg" alt="Salmó">
-                            <div class="overlay-menu">Farcells de boletus</div>
+                            <div class="overlay-menu">Salmó</div>
                         </span>
                     </div>
                 </div>
@@ -182,13 +182,17 @@
                 </div>
             </section>
 
-            /<!-- video -->
-            <div>
-                <video id="video" width="320" height="240" control></video>
-                    <source src="..." type="video/ogg">
-            </div>
+            <!-- video -->
+            <section class="video-container">
+                <h2>Video</h2>
+                <div class="video-contain">
+                    <video id="video" width="50%" controls>
+                        <source src="video/rest-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
             
-            <!-- SECCIÓ "Formular" -->
+            <!-- SECCIÓ "Formulari" -->
             <section class="formulari-container" id="reservar"> <!-- es posa 'id' per poder-lo enllaçar amb els links del navegador i el botó flotant -->
                 <h2>Reservar</h2>
                 
@@ -233,8 +237,9 @@
                 </form>
             </section>
         </main>
-            <!-- Botó flotant "Reservar" -->
-            <button class="reservar-btn" aria-label="Anar al formulari de reserva" onclick="location.href='#reservar'">Reservar</button>
+        
+        <!-- Botó flotant "Reservar" -->
+        <button class="reservar-btn" aria-label="Anar al formulari de reserva" onclick="location.href='#reservar'">Reservar</button>
 
         <!-- FOOTER -->
         <footer class="footer-generic" aria-label="Informació de contacte del restaurant">

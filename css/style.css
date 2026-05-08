@@ -26,6 +26,7 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
 .nosaltres-container,
 .carta-container,
 .galeria-container,
+.video-container,
 .formulari-container {
     width: 80%;
     padding: 1rem;
@@ -108,10 +109,12 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     from {
         top: 70%;
         opacity: 0%;
+        color: orange;
     }
     to {
         top: 35%;
         opacity: 80%;
+        color: var(--color-text);
     }
 }
 
@@ -311,6 +314,13 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
 .galeria-contain .img-container:nth-child(5) img, 
 .galeria-contain .img-container:nth-child(8) img{
     filter: brightness(60%);    /* Enfosquim l'imatge */
+}
+
+/*------- Video -------*/
+.video-contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*------- Formulari -------*/
