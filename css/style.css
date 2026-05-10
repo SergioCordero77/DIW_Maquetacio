@@ -287,7 +287,6 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     display: block;         /* Ocupa l'espai disponible */
     width: 100%;
     height: auto;
-  
 }
 
 .overlay {
@@ -318,9 +317,54 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
 
 /*------- Video -------*/
 .video-contain{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.video-overlay{
+    position: relative;
+    width: 70%;
+    overflow: hidden;
+}
+
+.video-overlay video {
+    display: block;         /* Ocupa l'espai disponible */
+    width: 100%;
+    height: auto;
+}
+
+.overlay-video {
+    position: absolute;                 /* Posicionament respecte al contenidor pare */
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: 0.5s ease;
+    opacity:0;                          /* Queda ocult */
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;             /* Padding inclós dins del width */
+}
+
+.video-overlay:hover .overlay-video{
+    opacity: 1;
+}
+
+.video-icons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.material-symbols-outlined{
+    cursor: pointer;
+}
+
+.material-symbols-outlined:hover {
+    text-shadow: 0 0 10px rgba(237, 244, 247, 0.8);
 }
 
 /*------- Formulari -------*/

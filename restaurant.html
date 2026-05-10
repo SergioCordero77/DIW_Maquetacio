@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang = "ca">
     <head>
-    <meta charset="UTF-8">
-    
-    <title>Pàgina principal</title>
-    
-    <!-- Librería de iconos (Font Awesome) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Icona a la pestanya del navegador -->
-    <link rel="icon" type="image/x-icon" href="img/Logo-sense-fons.png">
-    
-    
+        <meta charset="UTF-8">
+        
+        <title>Pàgina principal</title>
+        
+        <!-- Llibreria d'icones (Font Awesome) -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Icona a la pestanya del navegador -->
+        <link rel="icon" type="image/x-icon" href="img/Logo-sense-fons.png">
+        <!-- Llibreria d'iconos (Google Icons) -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        
     </head>
     <body> 
         <!-- MENÚ DE NAVEGACIÓ -->
-        <nav class="menu-container" aria-label="Menú principal">
+        <nav id="navbar" class="menu-container" aria-label="Menú principal">
             <ul class="menu-principal">
                 <li class="link"><a href="#nosaltres" aria-label="Anar a la secció Sobre nosaltres">Nosaltres</a></li>
                 <li class="link"><a href="#carta" aria-label="Anar a la secció Carta">Carta</a></li>
@@ -186,10 +187,31 @@
             <section class="video-container">
                 <h2>Video</h2>
                 <div class="video-contain">
-                    <video id="video" width="50%" controls>
-                        <source src="video/rest-video.mp4" type="video/mp4">
-                    </video>
+                    <!-- Video amb overlay -->
+                    <div class="video-overlay">
+                        <video id="video">
+                            <source src="video/rest-video.mp4" type="video/mp4">
+                        </video>
+                    
+                        <div class="overlay-video">
+                            <div class="video-icons">
+                                <span class="material-symbols-outlined" onclick="playVideo()">
+                                    play_circle
+                                </span>
+                                <span class="material-symbols-outlined" onclick="pauseVideo()">
+                                    pause_circle
+                                </span>
+                                <span class="material-symbols-outlined" onclick="volumeVideo()">
+                                    volume_up
+                                </span>
+                                <span class="material-symbols-outlined" onclick="muteVideo()">
+                                    volume_off
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                coger iconos con google icons, hacer un overlay, ponerle onclick a los iconos y vincularlos a la funión de javascript.
             </section>
             
             <!-- SECCIÓ "Formulari" -->
@@ -263,5 +285,50 @@
                 <img src="img/Logo.png" alt="Logo Els Coberts">
             </div>
         </footer>
+
+        <script>
+            //Agafem el video del DOM
+            const video = document.getElementById("video");
+
+            // Funció del play
+            function playVideo(){
+                video.play();
+            }
+            
+            // Funció de pause
+            function pauseVideo(){
+                video.pause();
+            }
+
+            // Funció per pujar el volum
+            function volumeVideo(){
+                video.volume=0.2;
+            }
+
+            // Funció de mute
+            let isMuted = false;
+
+            function muteVideo(){
+                if (isMuted){
+                    video.muted=false;    
+                    isMuted = false;
+                }
+                else{
+                    video.muted=true;
+                    isMuted = true;    
+                }
+            }
+
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("navbar").style.padding = "30px 10px";
+                } else {
+                    document.getElementById("navbar").style.padding = "80px 10px";
+                }
+            }
+        </script>
+
     </body>
 </html> 
