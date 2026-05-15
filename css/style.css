@@ -42,6 +42,8 @@ body p{                     /* S'aplica a tots els paràgrafs del body */
     margin-bottom: 0;   /* Treiem els marges per sota */
     top: 0;             /* Anclatge a la part superior de la pàgina */
     z-index: 1;         /* Queda per sobre de tots els elements */
+    padding: 80px 10px;
+    transition: all 1s;
 }
 
 .menu-principal {
@@ -440,6 +442,31 @@ button[type="submit"]{
     bottom: 4rem;                   /* Posició desde sota */
     right: 1.5rem;                  /* Posició desde la dreta */
     transition: 1s;
+    animation-name: boto;
+    animation-duration: 2s;
+}
+
+@keyframes boto {
+    0% {
+        transform: translateX(-300%) scale(0.25);
+        background-color: white;
+        opacity: 0;
+    }
+    33% {
+        transform: translateX(-200%) scale(0.5);
+        background-color: #91c3f8;
+        opacity: 40%;
+    }
+    66% {
+        transform: translateX(-100%) scale(0.75);
+        background-color: #449af7;
+        opacity: 80%;
+    }
+    100% {
+        transform: translateX(0);
+        background-color: var(--color-principal);
+        padding: 0.5rem 1.1rem;
+    }
 }
 
 .reservar-btn:hover {      /* Quan passem el ratolí per sobre */
