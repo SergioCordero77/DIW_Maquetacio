@@ -30,3 +30,29 @@ Animacions
     transform: rotateY(360deg);
     transition: 1s;
 }
+
+
+Animació en 4 frames del botó fix de reservar
+
+@keyframes boto {
+    0% {
+        transform: translateX(-300%) scale(0.25);
+        background-color: white;
+        opacity: 0;
+    }
+    33% {
+        transform: translateX(-200%) scale(0.5);
+        background-color: #91c3f8;
+        opacity: 40%;
+    }
+    66% {
+        transform: translateX(-100%) scale(0.75);
+        background-color: #449af7;
+        opacity: 80%;
+    }
+    100% {
+        transform: translateX(0);
+        background-color: var(--color-principal);
+        padding: 0.5rem 1.1rem;
+    }
+}
